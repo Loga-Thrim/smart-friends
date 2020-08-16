@@ -1,0 +1,158 @@
+@font-face {
+  font-family: "Regular";
+  src: url("fonts/Kanit-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Light";
+  src: url("fonts/Kanit-Light.ttf");
+}
+
+.container {
+  font-family: Regular;
+  width: 100%;
+  height: 100vh;
+  background: #821432;
+  background: url("../public/background_register.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.backgroundPeople {
+  width: 102%;
+  position: absolute;
+  height: 600px;
+  background: url("../public/background_register_people.png");
+  opacity: 0.4;
+  background-size: cover;
+  left: -0.4%;
+  bottom: -50px;
+  background-repeat: no-repeat;
+  animation: backgroundRotate 5s infinite;
+}
+
+.box {
+  margin-left: auto;
+  margin-right: auto;
+  width: 27%;
+  padding: 50px;
+  padding-bottom: 80px;
+  background: rgba(0, 0, 0, 0.5);
+  top: 13%;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.box span.title {
+  color: white;
+  font-size: 20px;
+  font-family: Light;
+}
+.box span.title span {
+  font-size: 36px;
+  letter-spacing: 0.5px;
+  color: #a71a40;
+}
+
+.box .user_box {
+  position: relative;
+}
+.box .user_box input {
+  font-family: Light;
+  width: 100%;
+  padding: 12px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 50px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+  letter-spacing: 2.5px;
+}
+.box .user_box label {
+  font-family: Light;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+  letter-spacing: 1px;
+}
+.box .user_box input:focus {
+  border-bottom: 1px solid #03e9f4;
+}
+.box .user_box input:focus ~ label,
+.box .user_box input:valid ~ label {
+  top: -30px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 14px;
+}
+
+.box .btn {
+  font-family: Regular;
+  cursor: pointer;
+  padding: 9px 0;
+  width: 100%;
+  font-size: 16px;
+  background: white;
+  position: relative;
+  transition: 0.2s;
+  border-radius: 3px;
+}
+
+.btn .backgroundBtn {
+  top: 0;
+  left: 0;
+  width: 0%;
+  position: absolute;
+  background: #c2033d;
+  height: 100%;
+}
+
+.btn:hover {
+  transition-delay: 0.2s;
+  background: #c2033d;
+  color: white;
+}
+.btn:hover > .backgroundBtn {
+  animation: backgroundAnimation 0.4s;
+}
+
+.googleBtn {
+  width: 100%;
+}
+
+.box hr {
+  border: 0;
+  border-top: 1px solid #a71a40;
+  width: 50%;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    width: 0%;
+  }
+  75% {
+    font-size: 18px;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes backgroundRotate{
+  0%{transform: rotate(2deg);}
+  50%{transform: rotate(-2deg);}
+  100%{transform: rotate(2deg);}
+}
+
+@media only screen and (max-width: 400px) {
+  .backgroundPeople {
+    height: 350px;
+  }
+}

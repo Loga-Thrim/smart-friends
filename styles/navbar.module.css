@@ -1,0 +1,58 @@
+@font-face{
+    font-family: 'Regular';
+    src: url('fonts/Kanit-Regular.ttf') format('truetype');
+}
+
+.container{
+    font-family: 'Regular';
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    z-index: 999999999;
+}
+
+.container li{
+    list-style-type: none;
+    float: left;
+    width: 33.33333%;
+    display: flex;
+    text-align: center;
+    position: relative;
+}
+
+.container .background{
+    top: 0;
+    left: 0;
+    width: 0%;
+    position: absolute;
+    background: #C2033D;
+    height: 100%;
+}
+
+.container li a{
+    background: rgb(25, 25, 50);
+    flex: 1;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 18px 0;
+    font-size: 26px;
+    letter-spacing: 0px;
+}
+
+.container li a:hover{
+    transition-delay: .2s;
+    background: #C2033D;
+}
+.container li a:hover > .background{
+    animation: backgroundAnimation .2s;
+}
+
+@keyframes backgroundAnimation{
+    0%{width: 0%;}
+    100%{width: 100%;}
+}
