@@ -12,7 +12,7 @@ yarn dev
 
 #### you can go to path /login (localhost:3000/login) for see Authentication page.
 #### this project used MongoDB for database.
-##### on database you should to add collections consisted of
+##### On database you should to add collections consisted of
 - ##### `posts`
   - _id
   - username
@@ -25,3 +25,14 @@ yarn dev
   - num
   - join
   - img
+- ##### `users`
+  - _id
+  - createedProfile
+  - email
+  - name
+  - age
+  - gender
+  - picture
+  - grade
+  - faculty
+  - major
