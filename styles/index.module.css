@@ -1,4 +1,117 @@
+@font-face {
+    font-family: "Regular";
+    src: url("fonts/Kanit-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Light";
+    src: url("fonts/Kanit-Light.ttf");
+}
+@font-face {
+    font-family: "Extralight";
+    src: url("fonts/Kanit-ExtraLight.ttf")
+}
+
 .container{
+    font-family: Regular;
+    position: relative;
+    margin: 0;
+    padding: 0;
     width: 100%;
-    height: 100vh;
+    min-height: calc(100vh - 72px);
+    overflow-x: hidden;
+    background: url("/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.containerOpacity{
+    top: 0;
+    width: 100%;
+    height: calc(100vh + 100%);
+    background: rgba(0, 0, 0, .2);
+}
+
+
+
+.content_menu{
+    position: fixed;
+    width: 20%;
+    height: calc(100vh - 100px);
+    text-align: center;
+    padding: 4% 0;
+    color: white;
+}
+.content_menu span{
+    font-family: Light;
+    font-size: 20px;
+}
+
+
+.content{
+    position: relative;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 4% 0;
+}
+.content .box{
+    color: white;
+}
+.content .box .mainBox{
+    margin-bottom: 40px;
+    background: rgb(20, 20, 40);
+    border-radius: 7px;
+}
+
+.content .box .mainBox .boxPoster{
+    padding: 10px 20px;
+    overflow: hidden;
+}
+.content .box .mainBox .boxPoster img{
+    width: 40px;
+    border-radius: 50%;
+}
+.content .box .mainBox .boxPoster .name{
+    font-family: Extralight;
+    font-size: 14px;
+    position: relative;
+    top: -15px;
+    margin-left: 15px;
+    cursor: default;
+    letter-spacing: .1px;
+}
+
+.content .box .mainBox .boxHeader{
+    padding: 0px 20px;
+    margin-bottom: 10px;
+}
+.content .box .mainBox .boxHeader .title{
+    font-size: 20px;
+    font-family: Light;
+}
+
+.content .box .mainBox .boxContent{
+    width: calc(100% - 40px);
+    color: white;
+    line-height: 35px;
+    padding: 10px 20px;
+}
+.content .box .boxContent span{
+    display: block;
+    font-family: Light;
+    font-size: 16px;
+    letter-spacing: .5px;
+}
+.content .box .boxContent .rowLayout{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.content .box .boxContent .left{
+    flex: 1;
+}
+.content .box .boxContent .right{
+    flex: 1;
 }

@@ -12,7 +12,7 @@
     position: fixed;
     display: flex;
     justify-content: space-around;
-    z-index: 999999999;
+    z-index: 10;
 }
 
 .container li{
@@ -55,4 +55,18 @@
 @keyframes backgroundAnimation{
     0%{width: 0%;}
     100%{width: 100%;}
+}
+
+@media only screen and (max-width: 700px){
+    .container li a{
+        padding: 14px 0;
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 420px){
+    .container li a{
+        padding: 12px 0;
+        font-size: 18px;
+    }
 }

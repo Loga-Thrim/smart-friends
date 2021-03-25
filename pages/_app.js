@@ -1,4 +1,15 @@
+import Head from 'next/head';
 import Navbar from '../components/navbar';
+import { RecoilRoot } from 'recoil';
+import Router from 'next/router';
+
+// show ui loading with nprogress
+import NProgress from 'nprogress';
+import 'nprogress/nprogress.css';
+
+Router.events.on('routeChangeStart', () => NProgress.start())
+Router.events.on('routeChangeComplete', () => NProgress.done())
+Router.events.on('routeChangeError', () => NProgress.done())
 
 function MyApp({ Component, pageProps }) {
   let path = ""
@@ -6,22 +17,42 @@ function MyApp({ Component, pageProps }) {
 
   return(
     <div>
-      {(path === "/login" || path === "/register") ? null : <Navbar></Navbar>}
+      <Head>
+        <title>Smart Friends</title>
+      </Head>
 
-      <div className="container">
-        <Component {...pageProps} />
+      {(path === "/login" || path === "/register" || path === "/createprofile") ? null : <Navbar></Navbar>}
+
+      <div className="containerApp">
+        <RecoilRoot>
+          <Component {...pageProps} />
+        </RecoilRoot>
       </div>
 
       <style jsx global>{`
         body{
           margin: 0;
           padding: 0;
+          position: relative;
           overflow-x: hidden;
+          height: 100%;
         }
 
-        .container{
+        .containerApp{
           position: relative;
-          top: ${(path === "/login" || path === "/register") ? '0px' : '72px'};
+          top: ${(path === "/login" || path === "/register" || path === "/createprofile") ? '0px' : '75px'};
+        }
+
+        @media only screen and (max-width: 700px){
+          .containerApp{
+            top: ${(path === "/login" || path === "/register" || path === "/createprofile") ? '0px' : '61px'};
+          }
+        }
+
+        @media only screen and (max-width: 420px){
+          .containerApp{
+            top: ${(path === "/login" || path === "/register" || path === "/createprofile") ? '0px' : '51px'};
+          }
         }
 
         /* width */
@@ -43,6 +74,10 @@ function MyApp({ Component, pageProps }) {
         /* Handle on hover */
         ::-webkit-scrollbar-thumb:hover {
           background: rgb(50, 50, 75);
+        }
+
+        ::-webkit-scrollbar-thumb:active {
+          background: #C2033D;
         }
       `}</style>
     </div>

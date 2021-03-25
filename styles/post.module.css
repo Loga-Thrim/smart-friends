@@ -1,0 +1,359 @@
+@font-face {
+  font-family: "Regular";
+  src: url("fonts/Kanit-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Light";
+  src: url("fonts/Kanit-Light.ttf");
+}
+
+.container{
+    font-family: Regular;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: calc(100vh - 72px);
+    overflow-x: hidden;
+    background: url("/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.containerOpacity{
+    top: 0;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    background: red;
+    background: rgba(0, 0, 0, .1);
+    padding: 3% 0;
+}
+
+.content{
+    width: calc(56% - 6%);
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(20, 20, 40);
+    padding: 3% 3%;
+    position: relative;
+    border-radius: 7px;
+}
+
+.container span{color: white;}
+
+.content .preview{
+    position: absolute;
+    max-width: 45%;
+    max-height: 350px;
+    border-radius: 10px;
+    top: 50%;
+    right: 10%;
+}
+.content .preImg{
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    width: calc(45% - 30px);
+    height: 250px;
+    padding: 10px 15px;
+    background: rgb(30, 30, 50);
+    border-radius: 10px;
+    color: rgba(255, 255, 255, .8);
+}
+.content .title{
+    font-size: 30px;
+    color: white;
+}
+.content p{
+    font-family: "Light";
+    font-size: 20px;
+    letter-spacing: .5px;
+    color: white;
+}
+.content .input{
+    font-family: Regular;
+    width: calc(100% - 30px);
+    font-size: 18px;
+    border: 0;
+    border-radius: 3px;
+    padding: 10px 15px;
+    outline: none;
+}
+.content .input::placeholder{
+    font-size: 16px;
+}
+.content .inputTime{
+    font-size: 18px;
+    padding: 10px 10px;
+    width: calc(20% - 20px);
+    font-family: Regular;
+    outline: none;
+    border-radius: 3px;
+    border: 0;
+}
+.content .addImg{
+    outline: none;
+    border: 0px;
+    font-size: 16px;
+    color: white;
+    border-radius: 3px;
+    padding: 20px 0;
+    text-align: center;
+    background: rgb(0, 81, 119);
+    width: 30%;
+    cursor: pointer;
+    transition: .1s;
+}
+.content .addImg:hover{
+    background: rgb(0, 113, 165);
+}
+.content .selectOption{
+    width: 25%;
+}
+.content select{
+    width: 60%;
+    padding: 10px 5px;
+    outline: none;
+    border: 0;
+    border-radius: 3px;
+}
+.content .num{
+    width: calc(8% - 30px);
+    padding: 10px 15px;
+    outline: none;
+    border: 0;
+    border-radius: 3px;
+}
+.content .btnPost{
+    font-family: Light;
+    border: 0;
+    border-radius: 5px;
+    font-size: 20px;
+    letter-spacing: .5px;
+    color: white;
+    background: #821432;
+    width: 100%;
+    height: 7vh;
+    cursor: pointer;
+    transition: .2s;
+    outline: none;
+}
+.content .btnPost:hover{
+    background: #a71a40;
+}
+
+
+
+.choosePic{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    background: rgba(0, 0, 0, .93);
+    overflow: scroll;
+}
+.choosePicContent{
+    position: relative;
+    background: rgb(20, 20, 40);
+    width: calc(43% - 60px);
+    padding: 25px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 10%;
+    border-radius: 5px;
+    padding-bottom: 50px;
+}
+.choosePicContent .title{
+    font-size: 24px;
+}
+.btnUploadImg{
+    width: 100%;
+    display:inline-block;
+    border: 0;
+    border-radius: 3px;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    background: white;
+    transition: .2s;
+    outline: none;
+}
+.btnUploadImg:hover{
+    background: rgb(0, 81, 119);
+    color: white;
+}
+.choosePicContent span{
+    font-family: Light;
+    font-size: 14px;
+    letter-spacing: .5px;
+}
+.choosePicContent .cross{
+    background: white;
+    width: 35px;
+    height: 35px; 
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    border-radius: 50%;
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+.choosePicContent .cross:hover{
+    background: rgb(20, 20, 40);
+    color: white;
+}
+
+
+@media only screen and (max-width: 700px){
+    .container{ font-size: 14px }
+    .content{
+        width: calc(76% - 6%);
+    }
+    .content .title{
+        font-size: 20px;
+    }
+    .content .preview{
+        width: 45%;
+        max-height: 350px;
+        right: 5%;
+    }
+    .content p{
+        font-size: 18px;
+    }
+    .content .input{
+        font-size: 16px;
+        padding: 5px 15px;
+    }
+    .content .input::placeholder{
+        font-size: 14px;
+    }
+    .content .inputTime{
+        font-size: 16px;
+        padding: 5px 10px;
+        width: calc(30% - 20px);
+    }
+    .content .addImg{
+        font-size: 14px;
+        padding: 13px 0;
+        width: 30%;
+    }
+    .content span{
+        font-size: 14px;
+    }
+    .content .selectOption{
+        width: 35%;
+    }
+
+    .choosePicContent{
+        width: calc(65% - 60px);
+        top: 7%;
+        padding-bottom: 50px;
+    }
+    .choosePicContent .title{
+        font-size: 20px;
+    }
+    .btnUploadImg{
+        padding: 10px 0;
+        font-size: 16px;
+    }
+    .choosePicContent span{
+        font-size: 13px;
+    }
+    .choosePicContent .cross{
+        width: 20px;
+        height: 20px; 
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 420px){
+    .container{font-size: 12px}
+    .content{
+        width: calc(95% - 10%);
+        padding: 5% 5%;
+    }
+    .content .preImg{
+        display: none;
+    }
+    .content .preview{
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin-top: 30px;
+        right: 0%;
+    }
+    .content .title{
+        font-size: 24px;
+    }
+    .content p{
+        font-size: 18px;
+    }
+    .content .input{
+        width: calc(100% - 10px);
+        font-size: 15px;
+        padding: 3px 5px;
+    }
+    .content .input::placeholder{
+        font-size: 14px;
+    }
+    .content .inputTime{
+        margin-left: 30px;
+        font-size: 15px;
+        padding: 3px 5px;
+        width: calc(40% - 10px);
+    }
+    .content .addImg{
+        font-size: 15px;
+        padding: 15px 0;
+        width: 50%;
+    }
+    .content span{
+        font-size: 13px;
+    }
+    .content .selectOption{
+        width: 60%;
+    }
+    .content .num{
+        width: calc(25% - 30px);
+        padding: 7px 10px;
+        font-size: 14px;
+    }
+    .content .btnPost{
+        font-size: 16px;
+        height: 6vh;
+    }
+
+
+
+    .choosePicContent{
+        width: calc(85% - 60px);
+        top: 7%;
+    }
+    .choosePicContent .title{
+        font-size: 18px;
+    }
+    .btnUploadImg{
+        padding: 6px 0;
+        font-size: 16px;
+    }
+    .choosePicContent span{
+        font-size: 11px;
+    }
+    .choosePicContent .cross{
+        width: 25px;
+        height: 25px; 
+        font-size: 16px;
+    }
+}
+
+
+@media only screen and (max-height: 600px){
+    .choosePicContent{
+        padding-bottom: 100px;
+    }
+}
