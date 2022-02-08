@@ -12,7 +12,7 @@ yarn dev
 
 #### you can go to /login path (localhost:3000/login) to see authentication page.
 #### this project used MongoDB for database.
-##### On database you should to add collections consisted of
+##### Create database name "smf" and you should to add collections consisted of
 - ##### `posts`
   - _id
   - username
